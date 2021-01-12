@@ -1,0 +1,10 @@
+/* starts with an element to select, key value pairs for speicific element properties*/
+body {
+  color: red;
+}
+
+li {
+  border-width: thin;
+  border-color: blue;
+  border-style: dashed;
+}
