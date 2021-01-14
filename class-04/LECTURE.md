@@ -90,3 +90,15 @@ console.log(arrayGlobal);
 
 
 ```
+
+## Pair Programming
+
+- What? 2 people dedicated to the same outcome, there a driver ( who writes all the code ) and a navigator ( who keeps the driver in check )
+  - Both share the responsibility fo producing a working thing.
+    - Navigator - we need a function that sums 2 values
+    - Driver - function (param1, param2) {}
+    - Navigator - name the parameters num1, and num2.
+- Why?  Seperating the responsiblities of each programmer makes us more efficient :)
+- How? The Driver, will work the navigators project repo on github, and clone it down and do work at this.
+  - A fork is an exact copy of someone elses repository, but under your github account.
+  - After work is completed you make a pull requests to merge the code that you worked on together back in to the original person (navigator) repo.
