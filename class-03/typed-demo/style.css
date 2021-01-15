@@ -1,0 +1,24 @@
+body {
+  background-color: grey;
+}
+
+
+div {
+  /* display: inline-block; */
+
+  /* Flaot is a property specifically for block styled elements, this will get the element to sit to the left of divs proceding */
+  float: left; 
+  height: 100px ;
+  width: 100px;
+  background-color: black;
+  border: solid pink 10px;
+  /* margin: 50px 25px 15px 5px; */
+  margin: 50px;
+  padding: 100px;
+  color: red;
+}
+
+/* clearing the floated elements that precede it */
+p {
+  clear: left;
+}

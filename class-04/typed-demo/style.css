@@ -1,0 +1,38 @@
+body {
+  height: 2000px;
+  width: 2000px;
+}
+
+#container {
+  background-color: grey;
+  width: 500px;
+  height: 500px;
+  margin: 40px;
+  /* position: absolute;  */
+  /* left: 50px; */
+}
+
+div {
+  width: 200px;
+  height: 200px;
+  float: left;
+  /* margin: 10px; */
+}
+
+#box1 {
+  background-color: red;
+  position: absolute;
+  top: 500px;
+  margin: 0px;
+  left: 0px;
+}
+
+#box2 {
+  background-color: blue;
+  margin: 15px;
+}
+
+#box3 {
+  background-color: aqua;
+  margin: 15px;
+}
