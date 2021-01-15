@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* font-family: 'Lobster', cursive; */
+  font-size: 50px;
+  font-weight: 900;
+  /* color: red; */
+  /* color: #000000; */
+  color: rgb(0, 0, 255);
+}
+
+
+div {
+  margin: 20px 0;
+  border: thin black solid;
+  padding: 10px;
+}
+
+/* div + span {
+  background-color: red;
+} */
+
+/* div ~ span {
+  background-color: red;
+} */
+
+/* span + div {
+  background-color: red;
+}  */
+
+input[type=text] {
+  background-color: red;
+}
+
+div:hover {
+
+  background-color: pink;
+}
+
+div:hover::before {
+  content: 'before text'
+}
+
+div:after {
+  content: 'after text'
+}
+
+/* section {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  background-image: url('https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png');
+} */
+
+img {
+  width: 100px;
+}
