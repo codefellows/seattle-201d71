@@ -1,6 +1,9 @@
 'use strict';
+
+//const { ConsoleWriter } = require("istanbul-lib-report");
+
 /////////////////////////////////////
-/* Problem 1 (this is your demo that we'll solve in class)
+/*Problem 1 (this is your demo that we'll solve in class)
 Write a function called sum() that takes in two numbers as arguments and then returns an array where the first element is the sum of those numbers, and the second element is a concatenated string that EXACTLY follows this example and uses the values that were input into the function:
 
 "The sum of 4 and 7 is 11."
@@ -9,11 +12,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+  var result = [];
+  
+  var sum = a + b;
+  
+  result[0] = sum;
+  result[1] = `The sum of ${a} and ${b} is ${result}.` 
+  return result;
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
+
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -28,12 +38,19 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
 
+var result = [];
+
+result[0] = a * b;
+result[1] = `The product of ${a} and ${b} is ${result}.`
+return result;
+
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+
 
 /////////////////////////////////////
 /* Problem 3
@@ -48,13 +65,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+  var result = [];
+  result[0] = sum(a, sum(b, c)[0])[0]
+  result[1] = multiply(a, multiply(b, c)[0])[0];
+  result[2] = `${a} and ${b} and ${c} sum to ${result[0]}.`
+  result[3] = `The product of ${a} and ${b} and ${c} is ${result[1]}.`
+  return result;
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+ testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
+
+
+
+
 
 /////////////////////////////////////
 /* Problem 4
@@ -70,12 +95,18 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  //create a new array
+  var result = [];
+  //create a variable to sum all the numbers
+  result[0] = sumAndMultiply(testArray[0], testArray[1], testArray[2])[0]
+  //add all numbers in array and put at [0] index
+  result[1] = `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${result[0]} is their sum.`
+  return result;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -87,21 +118,95 @@ Write a function called multiplyArray() that takes an array of numbers as its ar
 
 IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. This function should handle an array containing three elements. However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
+  var result = [];
+  //concat multiple arrays into a single array
+  var concatArray = result.concat(multArr);
+  var result = concatArray;
+  //console.log(concatArray); 
+  //create a loop to multiply the numbers together in the array
+  var total = 1;
+  for (var i = 0; i < result.length; i++) {
+    total *= result[i]
+  }
 
+  //first element is product of all numbers in array
+  result[0] = total;
+  //console.log(total); 
+
+  //second element "The numbers a,b,c have a product of 24."
+  concatArray[1] = `The numbers ${result[0]},${result[1]},${result[2]} have a product of ${total}.`
+  console.log(concatArray[1]);
 }
 
+*/
+
+function multiplyArray(multArr) { //eslint-disable-line
+  var result = [];
+  //concat multiple arrays into a single array
+  var concatArray = result.concat(multArr);
+  
+  //Need to make a clone of concatArray and push to result
+  for ( i = 0; i < concatArray.length; i++) {
+    result[i] = concatArray[i]
+  }
+  //console.log(result[0])
+  
+  var total = 1;
+  for (var i = 0; i < concatArray.length; i++) {
+    total *= concatArray[i]
+  }
+
+  //console.log(concatArray + " This is concatArray")
+  //console.log(result + " This is result");
+
+  //first element is product of all numbers in array
+  concatArray[0] = total;
+  
+
+  //console.log(result[0] + " This is result[0]")
+  //second element "The numbers a,b,c have a product of 24."
+  concatArray[1] = `The numbers ${result[0]},${result[1]},${result[2]} have a product of ${total}.`
+  //console.log(concatArray[1]);
+  return concatArray;
+}
+
+
+
+
+
+
+
+
+
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
 // Don't forget to create a new branch for your work on the next question, if you attempt it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
