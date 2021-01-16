@@ -1,5 +1,5 @@
 'use strict';
-
+console.log('hey from tests js')
 // You should not modify anything in this file, but feel free to look through it!
 
 function testSum() { //eslint-disable-line
