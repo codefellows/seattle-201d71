@@ -27,11 +27,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
- return a * b;
+
 }
 
 // Here is the test for multiply(); uncomment it to run it
- multiply(5,9);
+// testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -128,10 +128,16 @@ Test this function by hand in the console to get it working, and when you think 
 var testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+        var product = 1;
+        var dynamicString = dynamicArray.toString();
+        for(var x = 0; x < dynamicArray.length; x++){
+                product = multiply(product, dynamicArray[x]);
+        }
+        var finalstring = "The numbers " + dynamicString + " have the product " + product;
+        return finalstring;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+ testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
