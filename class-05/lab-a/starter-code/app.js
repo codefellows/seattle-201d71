@@ -27,9 +27,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-
+        return a * b;
 }
-
+multiply(5,9);
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
 
@@ -48,10 +48,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
+var sumx = testSum(a,b);
+var sum_final = testSum(sumx,c);
 
-var sum = a + b + c;
-var prod = a * b * c;
-return [sum, prod]
+var prodx = multiply(a,b);
+var prod_final = multiply(prodx,c);
+return [sum_final, prod_final];
 
 }
 
@@ -74,6 +76,7 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
+    var sum_X = testSum(su)
     var finalsum = sumArr[0] + sumArr[1] + sumArr[2];
     var finalstring = sumArr[0] + "," + sumArr[1] + "," + sumArr[2] + " was passed in as an array of numbers, and " + finalsum + " is the sum.";
     return [finalsum, finalstring];   
@@ -98,8 +101,10 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var multArray = [2,3,4];
 function multiplyArray(multArr) { //eslint-disable-line
-        var prod = multArr[0] * multArr[1] * multArr[2];
-        var multstring = "The numbers " +  multArr[0] + ", " + multArr[1] + ", " + multArr[2] + "have a product of " + prod;
+        var prod = multiply(multArr[0],multArr[1]);
+        var prod_final = multiply(prod,multArr[2]);
+        multstring = multArr.toString();
+        var multstring = "The numbers " + multstring + " have a product of " + prod_final;
         return [prod, multstring];       
 }
 
