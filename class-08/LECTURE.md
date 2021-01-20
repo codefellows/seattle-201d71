@@ -7,12 +7,27 @@
   *     - Name: String
   *     - Health Points: Number
   *     - Attack Points: Number
-  *     - Abilities: Array of String
-  *     - Speak: A Method that console logs the Pokemons name
+  *     - Abilities: Array of Strings
+  *     - Speak: A Method that console logs the Pokemon's name
 **/
 
-function Pokemon() {
-  
+function Pokemon(namePoke, attackPoints, healthPoints, abilities, speak) {
+  this.name = namePoke;
+  this.abilities = abilities;
+  this.healthPoints = healthPoints;
+  this.attackPoints = attackPoints;
+  this.speak = function() {
+    console.log(speak, this.name, this.name, this.name);
+  }
+  this.speak();
 }
 
+var pikachu = new Pokemon('Pikachu', 3, 5, 'shoot fire', 'pika');
+console.log(pikachu, pikachu.speak());
+
+
 ```
+
+## Code Review
+
+- See `Review` Folder
