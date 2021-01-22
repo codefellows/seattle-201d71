@@ -1,0 +1,57 @@
+section div, div div {
+  background-color: black;
+}
+
+header section {
+  width: 100%;
+  height: 100px;
+  background-color: grey;
+}
+
+section div div {
+  background-color: grey;
+}
+
+.small {
+  width: 100px;
+  height: 100px;
+}
+
+.medium {
+  width: 200px;
+  height: 200px;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+p {
+  color: red;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: center;
+}
+
+li {
+  margin: 0 25px;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+main section {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
