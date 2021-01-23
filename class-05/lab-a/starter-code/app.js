@@ -8,12 +8,19 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-function sum(a, b) { //eslint-disable-line
+function sum(a, b) { 
+  var result = [];
+
+  var sum = a + b;
+
+  result[0] = sum;
+  result[1] = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
+  return result;
 
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+ sum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
