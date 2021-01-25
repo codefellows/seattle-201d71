@@ -1,0 +1,6 @@
+video {
+  width: 200px;
+  display: block;
+  border: thick solid red;
+  border-radius: 30px;
+}
