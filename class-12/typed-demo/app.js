@@ -49,12 +49,17 @@ function generateRandomImages() {
   var middleIndex = Math.floor(Math.random() * ProductImage.allImages.length);
 
   // as long as the their is one duplicate index
-  while (leftIndex === rightIndex || leftIndex === middleIndex) {
+  //   UPDATE:  We also need to check whether our middle and right Index are equal, that added index increases our complexity more that just double since everything needs to be compared.
+  while (leftIndex === rightIndex || leftIndex === middleIndex || middleIndex === rightIndex) {
     if (leftIndex === rightIndex) {
       rightIndex = Math.floor(Math.random() * ProductImage.allImages.length);
     }
     if (leftIndex === middleIndex) {
       middleIndex = Math.floor(Math.random() * ProductImage.allImages.length);
+    }
+    // Adding additional conditional here to account for the added condition in the while
+    if (middleIndex === rightIndex) {
+      rightIndex = Math.floor(Math.random() * ProductImage.allImages.length);
     }
   }
 
