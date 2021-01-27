@@ -23,7 +23,7 @@ Look at the following HTML and Javascript and discuss within your breakout rooms
 
 var addFiveButton = document.getElementById('add-five');
 var resultElement = document.getElementById('result');
-var count = parseInt(result.textContent);
+var count = parseInt(resultElement.textContent);
 
 addFiveButton.addEventListener('click', function(event) {
 
