@@ -104,7 +104,12 @@ var jacob = {
   age: 31
 }
 
+var stringify = JSON.sringify(jacob);
 
+localStorage.setItem('jacob', stringify); // "{'name': 'Jacob', 'age': '31'}"
 
+var objectAgain = JSON.parse(localStorage.getItem('jacob'));
+
+objectAgain.name // 'Jacob'
 
 ```
