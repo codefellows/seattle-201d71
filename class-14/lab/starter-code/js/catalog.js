@@ -5,14 +5,21 @@
 // Set up an empty cart for use on this page.
 var cart = new Cart([]);
 
+
 // On screen load, we call this method to put all of the busmall options
 // (the things in the Product.allProducts array) into the drop down list.
 function populateForm() {
+  
 
   //TODO: Add an <option> tag inside the form's select for each product
   var selectElement = document.getElementById('items');
   for (var i in Product.allProducts) {
-
+    
+    var optionsTag = document.createElement('option');
+    optionsTag.textContent = Product.allProducts[i].name;
+    
+    selectElement.appendChild(optionsTag);
+    
   }
 
 }
@@ -21,7 +28,14 @@ function populateForm() {
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
+event.preventDefault()
 
+var orderQuantity = event.target.quantity.value;
+
+var itemPicked = event.target.items.value;
+console.log(quantity, itemPicked);
+
+  
   // TODO: Prevent the page from reloading
 
   // Do all the things ...
