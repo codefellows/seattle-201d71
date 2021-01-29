@@ -7,9 +7,7 @@ table.addEventListener('click', removeItemFromCart);
 var cart;
 
 function loadCart() {
-  console.log("loadCart")
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  console.log("loadCart cart items", cartItems)
   cart = new Cart(cartItems);
 }
 
@@ -28,7 +26,7 @@ function showCart() {
 
   // TODO: Find the table body
   var tableBody = document.querySelector("#cart tbody")
-  for (var j = 0; j < cart.items.length; j++) {
+  for (var j = 0; j < cartItems.length; j++) {
     var tableRow = document.createElement('tr')
     var tableData1 = document.createElement('td')
     var tableData2 = document.createElement('td')
