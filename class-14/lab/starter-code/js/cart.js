@@ -7,10 +7,28 @@ table.addEventListener('click', removeItemFromCart);
 var cart;
 
 function loadCart() {
+  var tempArray = [];
+  var finalArray = [];
   var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  cart = new Cart(cartItems);
-}
+  for (let i=0; i < cartItems.length; i++){
+    var product = cartItems[i].product;
+    var quantity = cartItems[i].quantity;
+    tempArray.push([product, quantity]);
+  }
+    for (let j=0; j < tempArray.length; j++){
+      for (let k=0; k < Product.allProducts.length; k++){
+        if (Product.allProducts[k].name === tempArray[j][0]){
+          finalArray.push([Product.allProducts[k].filePath, tempArray[j][0], tempArray[j][1]]);
+          k = 20;
+        }
 
+      }
+    }
+    // console.log(Product.allProducts);
+  // console.log(finalArray);
+  cart = new Cart(cartItems);
+
+}
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
 function renderCart() {
   loadCart();

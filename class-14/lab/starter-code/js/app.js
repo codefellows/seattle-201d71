@@ -4,13 +4,18 @@
 var Cart = function(items) {
   // this.items is an array of CartItem instances.
   this.items = items;
+  console.log(this.items);
 };
 
 Cart.prototype.addItem = function(product, quantity) {
+  let newProduct = new CartItem(product, quantity);
+  this.items.push(newProduct)
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
 };
 
 Cart.prototype.saveToLocalStorage = function() {
+  let cartItems = JSON.stringify(this.items);
+  localStorage.setItem('cart', cartItems);
   // TODO: Fill in this instance method to save the contents of the cart to localStorage
 };
 
