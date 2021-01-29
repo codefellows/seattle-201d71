@@ -1,0 +1,106 @@
+div {
+  /* border: thin black solid; */
+}
+
+body {
+  width: 900px;
+  margin: 0 auto;
+} 
+
+.nav {
+  display: inline-block;
+}
+
+#nav-left{
+  display: flex;
+}
+
+#nav-right {
+  float: right;
+}
+
+#line-break {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 15px;
+  width: 900px;
+  background-image:url(lab-assets/hr-img.png);
+}
+
+li, ul {
+  display: inline;
+  justify-content: space-between;
+}
+
+#white {
+  color: white;
+}
+
+p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-indent: 30px;
+}
+
+#choc-pizza {
+  width: 100%;
+}
+
+#ingredients {
+  position: relative;
+}
+
+form {
+  z-index: 1;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+
+#paper {
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+footer {
+  position: static;
+  margin-top: 350px;
+}
+
+label {
+  display: flex;
+}
+
+.pillar-1 {
+  float: left;
+}
+.pillar-2 {
+  float: right;
+}
+
+#van {
+  float: left;
+}
+
+button {
+  float: right;
+  background-color: orangered;
+  color: white;
+  height: 50px;
+  width: 200px;
+}
+
+#end {
+  margin-top: 100px;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}
+
+#copyright {
+  display: flex;
+  align-items: top;
+  justify-content: center;
+}

@@ -58,3 +58,9 @@ Refer to the daily class repo for your assets required for this lab as well as a
   - How did this go, overall?
   - What observations or questions do you have about what you've learned so far?
   - How long did it take you to complete this assignment? And, before you started, how long did you think it would take you to complete this assignment?
+
+
+## Reference
+* [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index)
+* [copy right symbol](https://www.w3schools.com/html/html_symbols.asp)
+* [dot symbol](https://fsymbols.com/signs/bullet-point/)
