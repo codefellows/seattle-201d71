@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <title>201 Class Manager</title>
+</head>
+
+<body>
+  <aside id="layout-menu">
+    <nav id="controller">
+      <button id="make-pairs">Create Student Pairs</button>
+      <button id="get-student">Choose Random Student</button>
+      <button id="reset">Reset</button>
+    </nav>
+  </aside>
+  <main id="layout-main">
+    <h1>Code 201 Class Manager</h1>
+    <div id="layout-output">
+      <section id="student-pool">
+        <h2>Class Roster</h2>
+        <ol id="students" class="default"></ol>
+      </section>
+      <section>
+        <div id="pairs-container">
+          <h2>Pairs</h2>
+          <ol id="pairs">
+            <p>Click "Create Student Pairs" to create pairs</p>
+          </ol>
+        </div>
+        <div id="random-student-container">
+          <h2>Random Student</h2>
+          <h3 id="random-student">Click "Choose Random Student" to select a student</h3>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
